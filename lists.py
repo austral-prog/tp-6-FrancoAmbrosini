@@ -1,20 +1,58 @@
-# Replace the "ANSWER HERE" with your answer
-
-def remove_elements(list_to_remove_elements):
-    return "ANSWER HERE"  # Remove this line and implement
-
-
-def add_elements(list_to_add_elements):
-    return "ANSWER HERE"  # Remove this line and implement
-
-
-def is_empty(list_to_check):
-    return "ANSWER HERE"  # Remove this line and implement
-
-
-def check_lists(list_to_compare1, list_to_compare2):
-    return "ANSWER HERE"  # Remove this line and implement
+def remove_elements(lista):
+    if len(lista) >=6:
+        del lista[4:6]
+        del lista[0]
+        return lista
+    elif len(lista) ==5:
+        del lista[4]
+        del lista[0]
+        print(lista)
+    elif len (lista) ==0:
+        return lista
+    else:
+        del lista[0]
+        return lista
 
 
-def list_of_lists(list_of_lists_to_modify):
-    return "ANSWER HERE"  # Remove this line and implement
+
+
+def add_elements(lista):
+    lista.insert(0,'Pink')
+    lista.append('Yellow')
+    return lista
+
+def is_empty(lista):
+    if lista==[]:
+        return True
+    else:
+        return False
+
+
+
+def check_lists(lista1,lista2):
+    if len(lista1)>=3 and len(lista2)>=3:
+        if lista1[2] == lista2[2]:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
+def list_of_lists(lista):
+    if len(lista[0]) >= 2:
+        lista1 = lista[0][:2]
+    else:
+        lista1 = lista[0][:]
+    if len(lista[1]) >= 4:
+        lista2 = lista[1][1: 4]
+    else:
+        lista2 = lista[1][1:]
+    if len(lista[2]) >= 2:
+        lista3 = lista[2][-2:]
+    else:
+        lista3 = lista[2][:]
+    lista[0] = lista1
+    lista[1] = lista2
+    lista[2] = lista3
+    return lista
